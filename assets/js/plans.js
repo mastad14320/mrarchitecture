@@ -1,6 +1,6 @@
 import {
   db
-} from "/assets/js/firebase.js";
+} from "./firebase.js";
 
 import {
   
@@ -13,7 +13,7 @@ import {
 import {
   toggleFavorite, 
   isFavorite
-} from "/assets/js/favorites.js";
+} from "./favorites.js";
 
 import {
 
@@ -21,7 +21,7 @@ import {
 
   isInCart
 
-} from "/assets/js/cart.js";
+} from "./cart.js";
 
 // GRID
 const plansGrid =
