@@ -2,7 +2,7 @@ import {
 
 db
 
-} from "/assets/js/firebase.js";
+} from "./firebase.js";
 
 import {
 
@@ -35,7 +35,7 @@ function createPlanCard(plan) {
 return `
 
 <a
-  href="/plan-details.html?id=${plan.id}"
+  href="./plan-details.html?id=${plan.id}"
   class="group bg-white rounded-[24px] overflow-hidden shadow-sm hover:shadow-xl transition duration-300"
 >
 
