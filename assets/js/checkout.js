@@ -1,7 +1,7 @@
 import {
   auth,
   db
-} from "/assets/js/firebase.js";
+} from "./firebase.js";
 
 import {
 
@@ -25,7 +25,7 @@ import {
 
   openWhatsAppOrder
 
-} from "/assets/js/whatsapp.js";
+} from "./whatsapp.js";
 
 // ELEMENTS
 const checkoutItems =
