@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>House Plans | MR Architecture</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-sky-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header
+    class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-sky-100"
+  >
+
+    <nav class="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <a
+        href="/index.html"
+        class="flex items-center gap-3"
+      >
+      
+        <img
+          src="/assets/images/logo.png"
+          alt="MR Architecture"
+          class="w-12 h-12 object-contain"
+        >
+      
+        <div
+          class="hidden sm:block"
+        >
+      
+          <h2
+            class="text-base md:text-lg font-bold tracking-wide"
+          >
+            MR Architecture
+          </h2>
+      
+          <p
+            class="text-[10px] md:text-xs text-gray-500"
+          >
+            Dream • Design • Deliver
+          </p>
+      
+        </div>
+      
+      </a>
+
+      <!-- MENU -->
+      <ul class="hidden lg:flex items-center gap-8 font-medium">
+
+        <li>
+          <a href="index.html" class="hover:text-sky-500">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="plans.html" class="text-sky-600 font-semibold">
+            Plans
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="hover:text-sky-500">
+            Favorites
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="hover:text-sky-500">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- ACTIONS -->
+      <div class="flex items-center gap-3">
+
+        <!-- FAVORITES -->
+        <a
+          href="/favorites.html"
+          class="relative"
+        >
+        
+          ❤️
+        
+          <span
+            id="favoritesCount"
+            class="absolute -top-2 -right-2 bg-sky-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center"
+          >
+            0
+          </span>
+        
+        </a>
+        <!-- CART -->
+        <a
+          href="/cart.html"
+          class="relative"
+        >
+        
+          🛒
+        
+          <span
+            id="cartCount"
+            class="absolute -top-2 -right-2 bg-sky-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center"
+          >
+            0
+          </span>
+        
+        </a>
+
+        <!-- LOGIN -->
+        <button
+          class="hidden md:block bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 rounded-full"
+        >
+          Login
+        </button>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="pt-28 pb-10">
+
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+
+      <div
+        class="bg-gradient-to-r from-sky-600 to-sky-400 rounded-3xl p-8 md:p-12 text-white"
+        data-aos="fade-up"
+      >
+
+        <h1 class="text-4xl md:text-5xl font-bold">
+          Explore House Plans
+        </h1>
+
+        <p class="mt-4 text-sky-100 max-w-2xl">
+          Browse luxury, modern, and affordable house plans
+          crafted for smart and elegant living.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+<!-- FILTERS -->
+<div
+  class="mt-8 bg-white rounded-[28px] p-4 md:p-5 shadow-sm"
+>
+
+  <div
+    class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3"
+  >
+
+    <!-- SEARCH -->
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search plans..."
+      class="h-11 px-4 rounded-2xl border border-sky-100 outline-none text-[13px]"
+    />
+
+    <!-- MIN PRICE -->
+    <input
+      type="number"
+      id="minPrice"
+      placeholder="Min Price"
+      class="h-11 px-4 rounded-2xl border border-sky-100 outline-none text-[13px]"
+    />
+
+    <!-- MAX PRICE -->
+    <input
+      type="number"
+      id="maxPrice"
+      placeholder="Max Price"
+      class="h-11 px-4 rounded-2xl border border-sky-100 outline-none text-[13px]"
+    />
+
+    <!-- BEDROOMS -->
+    <select
+      id="bedroomsFilter"
+      class="h-11 px-4 rounded-2xl border border-sky-100 outline-none text-[13px]"
+    >
+
+      <option value="">
+        Bedrooms
+      </option>
+
+      <option value="1">1 Bedroom</option>
+      <option value="2">2 Bedrooms</option>
+      <option value="3">3 Bedrooms</option>
+      <option value="4">4 Bedrooms</option>
+      <option value="5">5+ Bedrooms</option>
+
+    </select>
+
+    <!-- FEATURED -->
+    <select
+      id="featuredFilter"
+      class="h-11 px-4 rounded-2xl border border-sky-100 outline-none text-[13px]"
+    >
+
+      <option value="">
+        All Plans
+      </option>
+
+      <option value="featured">
+        Featured
+      </option>
+
+    </select>
+
+    <!-- SORT -->
+    <select
+      id="sortFilter"
+      class="h-11 px-4 rounded-2xl border border-sky-100 outline-none text-[13px]"
+    >
+
+      <option value="">
+        Sort By
+      </option>
+
+      <option value="newest">
+        Newest
+      </option>
+
+      <option value="cheap">
+        Cheapest
+      </option>
+
+      <option value="expensive">
+        Expensive
+      </option>
+
+    </select>
+
+  </div>
+
+</div>
+
+<div
+  id="plansGrid"
+  class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5"
+>
+</div>
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    href="https://wa.me/256769370218"
+    target="_blank"
+    class="fixed bottom-12 right-5 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50"
+  >
+    💬
+  </a>
+
+  <!-- MOBILE NAV -->
+  <div
+    class="fixed bottom-0 left-0 w-full bg-white border-t border-sky-100 lg:hidden z-40"
+  >
+
+    <div class="grid grid-cols-5 h-16">
+
+      <a
+        href="index.html"
+        class="flex flex-col items-center justify-center text-gray-500 text-sm"
+      >
+        🏠
+        <span>Home</span>
+      </a>
+
+      <a
+        href="plans.html"
+        class="flex flex-col items-center justify-center text-sky-600 text-sm"
+      >
+        🔍
+        <span>Plans</span>
+      </a>
+
+      <button class="flex flex-col items-center justify-center text-gray-500 text-sm">
+        <a href="favorites.html" class="flex flex-col items-center justify-center text-[11px]">
+        ❤️
+        <span>Favorites</span>
+        </a>
+      </button>
+
+      <button class="flex flex-col items-center justify-center text-gray-500 text-sm">
+        <a href="/cart.html" class="flex flex-col items-center justify-center text-[11px]">
+        🛒
+        <span>Cart</span>
+        </a>
+      </button>
+
+      <button class="flex flex-col items-center justify-center text-gray-500 text-sm">
+        <a href="profile.html" class="flex flex-col items-center justify-center text-[11px]">
+        👤
+        <span>Profile</span>
+        </a>
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- JS -->
+  <script src="assets/js/app.js"></script>
+<script type="module" src="assets/js/plans.js"></script>
+<script type="module" src="assets/js/favorites.js"></script>
+<script
+  type="module"
+  src="/assets/js/navbar.js"
+></script>
+</body>
+</html>

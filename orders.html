@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>My Orders | MR Architecture</title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="assets/css/style.css"
+  />
+
+</head>
+
+<body class="bg-sky-50 text-gray-800">
+
+  <!-- PAGE -->
+  <section class="py-6 md:py-10">
+
+    <div class="max-w-7xl mx-auto px-4">
+
+      <!-- TOP -->
+      <div
+        class="flex items-center justify-between gap-4"
+      >
+
+        <div>
+
+          <!-- BACK -->
+          <a
+            href="profile.html"
+            class="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 text-sm"
+          >
+            ← Back To Profile
+          </a>
+
+          <!-- TITLE -->
+          <h1
+            class="mt-4 text-2xl md:text-4xl font-bold"
+          >
+            My Orders
+          </h1>
+
+        </div>
+
+      </div>
+
+      <!-- ORDERS -->
+      <div
+        id="ordersContainer"
+        class="mt-8 space-y-5"
+      >
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MOBILE NAV -->
+  <div
+    class="fixed bottom-0 left-0 w-full bg-white border-t border-sky-100 md:hidden z-50"
+  >
+
+    <div class="grid grid-cols-5 h-16">
+
+      <!-- HOME -->
+      <a
+        href="index.html"
+        class="flex flex-col items-center justify-center text-[11px]"
+      >
+        🏠
+        <span>Home</span>
+      </a>
+
+      <!-- PLANS -->
+      <a
+        href="plans.html"
+        class="flex flex-col items-center justify-center text-[11px]"
+      >
+        📐
+        <span>Plans</span>
+      </a>
+
+      <!-- FAVORITES -->
+      <a
+        href="favorites.html"
+        class="flex flex-col items-center justify-center text-[11px]"
+      >
+        ❤️
+        <span>Favorites</span>
+      </a>
+
+      <!-- CART -->
+      <a
+        href="cart.html"
+        class="flex flex-col items-center justify-center text-[11px]"
+      >
+        🛒
+        <span>Cart</span>
+      </a>
+
+      <!-- PROFILE -->
+      <a
+        href="profile.html"
+        class="flex flex-col items-center justify-center text-[11px]"
+      >
+        👤
+        <span>Profile</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPT -->
+  <script type="module" src="assets/js/orders.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Register | MR Architecture</title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="assets/css/style.css"
+  />
+
+</head>
+
+<body class="bg-sky-50 text-gray-800 min-h-screen">
+
+  <!-- CONTAINER -->
+  <div
+    class="min-h-screen grid lg:grid-cols-2"
+  >
+
+    <!-- LEFT -->
+    <div
+      class="hidden lg:flex bg-sky-500 items-center justify-center p-10"
+    >
+
+      <div class="max-w-md text-white">
+
+        <h1
+          class="text-5xl font-bold leading-tight"
+        >
+          Create Account
+        </h1>
+
+        <p
+          class="mt-6 text-sky-100 leading-relaxed"
+        >
+          Join MR Architecture and save your favorite house plans,
+          manage orders, and access premium designs.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div
+      class="flex items-center justify-center p-5 md:p-10"
+    >
+
+      <!-- CARD -->
+      <div
+        class="w-full max-w-md bg-white rounded-[32px] p-6 md:p-8 shadow-sm"
+      >
+
+        <!-- LOGO -->
+        <a
+          href="index.html"
+          class="text-2xl font-bold text-sky-600"
+        >
+          MR Architecture
+        </a>
+
+        <!-- TITLE -->
+        <div class="mt-8">
+
+          <h2
+            class="text-2xl md:text-3xl font-bold"
+          >
+            Register
+          </h2>
+
+          <p
+            class="mt-2 text-gray-500"
+          >
+            Create your account.
+          </p>
+
+        </div>
+
+        <!-- FORM -->
+        <form id="registerForm" class="mt-8 space-y-5">
+
+          <!-- NAME -->
+          <div>
+
+            <label
+              class="block mb-2 text-[12px] text-gray-500"
+            >
+              Full Name
+            </label>
+
+            <input
+              id="registerName"
+              type="text"
+              placeholder="Enter your full name"
+              class="w-full h-12 px-4 rounded-2xl border border-sky-100 focus:outline-none focus:border-sky-500"
+            >
+
+          </div>
+
+          <!-- EMAIL -->
+          <div>
+
+            <label
+              class="block mb-2 text-[12px] text-gray-500"
+            >
+              Email Address
+            </label>
+
+            <input
+              id="registerEmail"
+              type="email"
+              placeholder="Enter your email"
+              class="w-full h-12 px-4 rounded-2xl border border-sky-100 focus:outline-none focus:border-sky-500"
+            >
+
+          </div>
+
+          <!-- PASSWORD -->
+          <div>
+
+            <label
+              class="block mb-2 text-[12px] text-gray-500"
+            >
+              Password
+            </label>
+
+            <input
+              id="registerPassword"
+              type="password"
+              placeholder="Create password"
+              class="w-full h-12 px-4 rounded-2xl border border-sky-100 focus:outline-none focus:border-sky-500"
+            >
+
+          </div>
+
+          <!-- CONFIRM -->
+          <div>
+
+            <label
+              class="block mb-2 text-[12px] text-gray-500"
+            >
+              Confirm Password
+            </label>
+
+            <input
+              type="password"
+              placeholder="Confirm password"
+              class="w-full h-12 px-4 rounded-2xl border border-sky-100 focus:outline-none focus:border-sky-500"
+            >
+
+          </div>
+
+          <!-- BUTTON -->
+          <button
+            type="submit"
+            class="w-full bg-sky-500 hover:bg-sky-600 text-white h-12 rounded-2xl transition"
+          >
+            Create Account
+          </button>
+
+        </form>
+
+        <!-- LOGIN -->
+        <p
+          class="mt-6 text-center text-gray-500 text-[13px]"
+        >
+
+          Already have an account?
+
+          <a
+            href="login.html"
+            class="text-sky-600 font-medium"
+          >
+            Login
+          </a>
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+<script type="module" src="assets/js/auth.js"></script>
+</body>
+</html>
