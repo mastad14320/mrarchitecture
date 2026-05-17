@@ -3,7 +3,7 @@ import {
 auth,
 db
 
-} from "/assets/js/firebase.js";
+} from "./firebase.js";
 
 import {
 
