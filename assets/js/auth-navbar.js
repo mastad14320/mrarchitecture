@@ -145,7 +145,7 @@ try {
   await signOut(auth);
 
   window.location.href =
-    "mrarchitecture/login.html";
+    "login.html";
 
 } catch (error) {
 
