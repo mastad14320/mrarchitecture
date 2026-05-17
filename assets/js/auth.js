@@ -1,4 +1,4 @@
-import { auth, db } from "/assets/js/firebase.js";
+import { auth, db } from "./firebase.js";
 
 import {
 
