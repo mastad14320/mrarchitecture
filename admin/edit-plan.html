@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Edit Plan | MR Architecture</title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  />
+
+</head>
+
+<body class="bg-sky-50 text-gray-800">
+
+  <!-- PAGE -->
+  <section class="py-6 md:py-10">
+
+    <div class="max-w-4xl mx-auto px-4">
+
+      <!-- TOP -->
+      <div>
+
+        <a
+          href="manage-plans.html"
+          class="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 text-sm"
+        >
+          ← Back To Plans
+        </a>
+
+        <h1
+          class="mt-4 text-2xl md:text-4xl font-bold"
+        >
+          Edit Plan
+        </h1>
+
+      </div>
+
+      <!-- FORM -->
+      <form
+        id="editPlanForm"
+        class="mt-8 bg-white rounded-[32px] p-5 md:p-8 shadow-sm space-y-5"
+      >
+
+        <!-- NAME -->
+        <div>
+
+          <label class="text-sm font-medium">
+            Plan Name
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            class="mt-2 w-full h-12 px-5 rounded-2xl border border-sky-100 outline-none"
+            required
+          />
+
+        </div>
+
+        <!-- GRID -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-4"
+        >
+
+          <!-- PRICE -->
+          <div>
+
+            <label class="text-sm font-medium">
+              Price
+            </label>
+
+            <input
+              type="number"
+              id="price"
+              class="mt-2 w-full h-12 px-4 rounded-2xl border border-sky-100 outline-none"
+              required
+            />
+
+          </div>
+
+          <!-- BEDROOMS -->
+          <div>
+
+            <label class="text-sm font-medium">
+              Bedrooms
+            </label>
+
+            <input
+              type="number"
+              id="bedrooms"
+              class="mt-2 w-full h-12 px-4 rounded-2xl border border-sky-100 outline-none"
+              required
+            />
+
+          </div>
+
+          <!-- BATHROOMS -->
+          <div>
+
+            <label class="text-sm font-medium">
+              Bathrooms
+            </label>
+
+            <input
+              type="number"
+              id="bathrooms"
+              class="mt-2 w-full h-12 px-4 rounded-2xl border border-sky-100 outline-none"
+              required
+            />
+
+          </div>
+
+          <!-- AREA -->
+          <div>
+
+            <label class="text-sm font-medium">
+              Area
+            </label>
+
+            <input
+              type="number"
+              id="area"
+              class="mt-2 w-full h-12 px-4 rounded-2xl border border-sky-100 outline-none"
+              required
+            />
+
+          </div>
+
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div>
+
+          <label class="text-sm font-medium">
+            Description
+          </label>
+
+          <textarea
+            id="description"
+            rows="5"
+            class="mt-2 w-full rounded-2xl border border-sky-100 outline-none p-4 resize-none"
+          ></textarea>
+
+        </div>
+
+        <!-- FEATURED -->
+        <div
+          class="flex items-center gap-3"
+        >
+
+          <input
+            type="checkbox"
+            id="featured"
+            class="w-5 h-5"
+          >
+
+          <label class="text-sm font-medium">
+            Featured Plan
+          </label>
+
+        </div>
+
+        <!-- CURRENT IMAGES -->
+        <div>
+
+          <h2
+            class="font-semibold"
+          >
+            Current Images
+          </h2>
+
+          <div
+            id="currentImages"
+            class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3"
+          >
+          </div>
+
+        </div>
+
+        <!-- NEW IMAGES -->
+        <div>
+
+          <label class="text-sm font-medium">
+            Replace Images
+          </label>
+
+          <input
+            type="file"
+            id="planImages"
+            multiple
+            accept="image/*"
+            class="mt-2 block w-full text-sm"
+          />
+
+        </div>
+
+        <!-- PLAN FILE -->
+        <div>
+
+          <label class="text-sm font-medium">
+            Replace Plan File
+          </label>
+
+          <input
+            type="file"
+            id="planFile"
+            accept=".pdf,.zip"
+            class="mt-2 block w-full text-sm"
+          />
+
+        </div>
+
+        <!-- SUBMIT -->
+        <button
+          type="submit"
+          class="w-full h-12 rounded-2xl bg-sky-500 hover:bg-sky-600 text-white font-medium transition"
+        >
+          Update Plan
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- ADMIN GUARD -->
+  <script
+    type="module"
+    src="../assets/js/admin-guard.js"
+  ></script>
+
+  <!-- SCRIPT -->
+  <script
+    type="module"
+    src="../assets/js/edit-plan.js"
+  ></script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Admin Orders | MR Architecture</title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  />
+
+</head>
+
+<body class="bg-sky-50 text-gray-800">
+
+  <!-- PAGE -->
+  <section class="py-6 md:py-10">
+
+    <div class="max-w-7xl mx-auto px-4">
+
+      <!-- TOP -->
+      <div
+        class="flex items-center justify-between gap-4"
+      >
+
+        <div>
+
+          <!-- BACK -->
+          <a
+            href="index.html"
+            class="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 text-sm"
+          >
+            ← Back To Dashboard
+          </a>
+
+          <!-- TITLE -->
+          <h1
+            class="mt-4 text-2xl md:text-4xl font-bold"
+          >
+            Orders Management
+          </h1>
+
+        </div>
+
+      </div>
+
+      <!-- ORDERS -->
+      <div
+        id="adminOrdersContainer"
+        class="mt-8 space-y-5"
+      >
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SCRIPT -->
+  <script
+    type="module"
+    src="../assets/js/admin-orders.js"
+  ></script>
+  <script type="module" src="../assets/js/admin-guard.js"></script>
+</body>
+
+</html>

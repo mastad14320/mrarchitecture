@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Admin Dashboard | MR Architecture</title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  />
+
+</head>
+
+<body class="bg-sky-50 text-gray-800">
+
+  <!-- SIDEBAR -->
+  <aside
+    class="hidden lg:flex fixed left-0 top-0 h-screen w-72 bg-white border-r border-sky-100 flex-col"
+  >
+
+    <!-- LOGO -->
+    <div
+      class="h-20 flex items-center px-8 border-b border-sky-100"
+    >
+
+      <a
+        href="../index.html"
+        class="text-2xl font-bold text-sky-600"
+      >
+        MR Architecture
+      </a>
+
+    </div>
+
+    <!-- NAV -->
+    <nav
+      class="flex-1 p-6 space-y-2"
+    >
+
+      <!-- DASHBOARD -->
+      <a
+        href="index.html"
+        class="flex items-center gap-3 bg-sky-500 text-white px-5 h-14 rounded-2xl"
+      >
+        📊 Dashboard
+      </a>
+
+      <!-- UPLOAD -->
+      <a
+        href="upload-plan.html"
+        class="flex items-center gap-3 hover:bg-sky-50 px-5 h-14 rounded-2xl transition"
+      >
+        ⬆ Upload Plan
+      </a>
+
+      <!-- MANAGE -->
+      <a
+        href="manage-plans.html"
+        class="flex items-center gap-3 hover:bg-sky-50 px-5 h-14 rounded-2xl transition"
+      >
+        🏠 Manage Plans
+      </a>
+
+      <!-- ORDERS -->
+      <a
+        href="orders.html"
+        class="flex items-center gap-3 hover:bg-sky-50 px-5 h-14 rounded-2xl transition"
+      >
+        📦 Orders
+      </a>
+
+      <!-- USERS -->
+      <a
+        href="users.html"
+        class="flex items-center gap-3 hover:bg-sky-50 px-5 h-14 rounded-2xl transition"
+      >
+        👥 Users
+      </a>
+
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="lg:ml-72 min-h-screen">
+
+    <!-- TOPBAR -->
+    <header
+      class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-sky-100"
+    >
+
+      <div
+        class="h-20 px-4 md:px-8 flex items-center justify-between"
+      >
+
+        <!-- TITLE -->
+        <div>
+
+          <h1
+            class="text-xl md:text-3xl font-bold"
+          >
+            Dashboard
+          </h1>
+
+          <p
+            class="text-gray-500 text-sm"
+          >
+            Welcome back admin.
+          </p>
+
+        </div>
+
+        <!-- PROFILE -->
+        <img
+          id="adminAvatar"
+          src="../assets/images/avatar.png"
+          class="w-11 h-11 rounded-full object-cover border border-sky-100"
+        >
+
+      </div>
+
+    </header>
+
+    <!-- CONTENT -->
+    <div class="p-4 md:p-8">
+
+      <!-- STATS -->
+      <div
+        class="grid grid-cols-2 xl:grid-cols-4 gap-5"
+      >
+
+        <!-- CARD -->
+        <div
+          class="bg-white rounded-[28px] p-5 shadow-sm"
+          data-aos="fade-up"
+        >
+
+          <div
+            class="w-12 h-12 rounded-2xl bg-sky-100 flex items-center justify-center text-xl"
+          >
+            🏠
+          </div>
+
+          <h2
+            id="totalPlans"
+            class="mt-5 text-3xl font-bold"
+          >
+            25
+          </h2>
+
+          <p
+            class="mt-2 text-gray-500 text-sm"
+          >
+            Total Plans
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="bg-white rounded-[28px] p-5 shadow-sm"
+          data-aos="fade-up"
+        >
+
+          <div
+            class="w-12 h-12 rounded-2xl bg-green-100 flex items-center justify-center text-xl"
+          >
+            📦
+          </div>
+
+          <h2
+            id="totalOrders"
+            class="mt-5 text-3xl font-bold"
+          >
+            12
+          </h2>
+
+          <p
+            class="mt-2 text-gray-500 text-sm"
+          >
+            Orders
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="bg-white rounded-[28px] p-5 shadow-sm"
+          data-aos="fade-up"
+        >
+
+          <div
+            class="w-12 h-12 rounded-2xl bg-pink-100 flex items-center justify-center text-xl"
+          >
+            ❤️
+          </div>
+
+          <h2
+            id="totalFavorites"
+            class="mt-5 text-3xl font-bold"
+          >
+            83
+          </h2>
+
+          <p
+            class="mt-2 text-gray-500 text-sm"
+          >
+            Favorites
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="bg-white rounded-[28px] p-5 shadow-sm"
+          data-aos="fade-up"
+        >
+
+          <div
+            class="w-12 h-12 rounded-2xl bg-yellow-100 flex items-center justify-center text-xl"
+          >
+            👥
+          </div>
+
+          <h2
+            id="totalUsers"
+            class="mt-5 text-3xl font-bold"
+          >
+            54
+          </h2>
+
+          <p
+            class="mt-2 text-gray-500 text-sm"
+          >
+            Users
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- GRID -->
+      <div
+        class="mt-8 grid xl:grid-cols-[1fr_350px] gap-8"
+      >
+
+        <!-- LEFT -->
+        <div class="space-y-8">
+
+          <!-- RECENT PLANS -->
+          <div
+            class="bg-white rounded-[28px] p-6 shadow-sm"
+            data-aos="fade-up"
+          >
+
+            <!-- HEADER -->
+            <div
+              class="flex items-center justify-between"
+            >
+
+              <h2
+                class="text-lg md:text-2xl font-bold"
+              >
+                Recent Plans
+              </h2>
+
+              <a
+                href="manage-plans.html"
+                class="text-sky-600 text-sm"
+              >
+                View All
+              </a>
+
+            </div>
+
+            <!-- TABLE -->
+            <div
+              class="mt-6 overflow-x-auto"
+            >
+
+              <table class="w-full">
+
+                <thead>
+
+                  <tr
+                    class="text-left border-b border-sky-100"
+                  >
+
+                    <th class="pb-4">
+                      Plan
+                    </th>
+
+                    <th class="pb-4">
+                      Price
+                    </th>
+
+                    <th class="pb-4">
+                      Status
+                    </th>
+
+                  </tr>
+
+                </thead>
+
+            <tbody
+              id="recentPlansTable"
+            >
+            </tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="space-y-6">
+
+          <!-- QUICK ACTIONS -->
+          <div
+            class="bg-white rounded-[28px] p-6 shadow-sm"
+            data-aos="fade-left"
+          >
+
+            <h2
+              class="text-lg md:text-2xl font-bold"
+            >
+              Quick Actions
+            </h2>
+
+            <!-- ACTIONS -->
+            <div
+              class="mt-6 space-y-3"
+            >
+
+              <!-- BUTTON -->
+              <a
+                href="upload-plan.html"
+                class="flex items-center justify-center bg-sky-500 hover:bg-sky-600 text-white h-12 rounded-2xl transition"
+              >
+                Upload New Plan
+              </a>
+
+              <!-- BUTTON -->
+              <a
+                href="manage-plans.html"
+                class="flex items-center justify-center border border-sky-200 hover:bg-sky-50 h-12 rounded-2xl transition"
+              >
+                Manage Plans
+              </a>
+
+              <!-- BUTTON -->
+              <a
+                href="orders.html"
+                class="flex items-center justify-center border border-sky-200 hover:bg-sky-50 h-12 rounded-2xl transition"
+              >
+                View Orders
+              </a>
+
+            </div>
+
+          </div>
+
+          <!-- CONTACT -->
+          <div
+            class="bg-white rounded-[28px] p-6 shadow-sm"
+            data-aos="fade-left"
+          >
+
+            <h2
+              class="text-lg md:text-2xl font-bold"
+            >
+              Support
+            </h2>
+
+            <div class="mt-5 space-y-4">
+
+              <a
+                href="tel:+256769370218"
+                class="flex items-center gap-3 hover:text-sky-600"
+              >
+                📞 +256 769 370218
+              </a>
+
+              <a
+                href="mailto:mastad14320@gmail.com"
+                class="flex items-center gap-3 hover:text-sky-600"
+              >
+                ✉ mastad14320@gmail.com
+              </a>
+
+              <a
+                href="https://wa.me/256769370218"
+                target="_blank"
+                class="flex items-center gap-3 hover:text-sky-600"
+              >
+                💬 WhatsApp Support
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- MOBILE NAV -->
+  <div
+    class="fixed bottom-0 left-0 w-full bg-white border-t border-sky-100 lg:hidden z-50"
+  >
+
+    <div class="grid grid-cols-5 h-16">
+
+      <!-- DASHBOARD -->
+      <a
+        href="index.html"
+        class="flex flex-col items-center justify-center text-sky-600 text-[11px]"
+      >
+        📊
+        <span>Dashboard</span>
+      </a>
+
+      <!-- UPLOAD -->
+      <a
+        href="upload-plan.html"
+        class="flex flex-col items-center justify-center text-gray-500 text-[11px]"
+      >
+        ⬆
+        <span>Upload</span>
+      </a>
+
+      <!-- PLANS -->
+      <a
+        href="manage-plans.html"
+        class="flex flex-col items-center justify-center text-gray-500 text-[11px]"
+      >
+        🏠
+        <span>Plans</span>
+      </a>
+
+      <!-- ORDERS -->
+      <a
+        href="orders.html"
+        class="flex flex-col items-center justify-center text-gray-500 text-[11px]"
+      >
+        📦
+        <span>Orders</span>
+      </a>
+
+      <!-- USERS -->
+      <a
+        href="users.html"
+        class="flex flex-col items-center justify-center text-gray-500 text-[11px]"
+      >
+        👥
+        <span>Users</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+  <script type="module" src="../assets/js/admin-guard.js"></script>
+  <script
+  type="module"
+  src="../assets/js/admin-dashboard.js"
+></script>
+</body>
+</html>

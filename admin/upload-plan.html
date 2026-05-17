@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Upload Plan | MR Architecture</title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  />
+
+</head>
+
+<body class="bg-sky-50 text-gray-800">
+
+  <!-- MAIN -->
+  <main class="py-10">
+
+    <div
+      class="max-w-3xl mx-auto px-4"
+    >
+        <!-- BACK -->
+        <div class="mb-6">
+        
+          <a
+            href="index.html"
+            class="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700"
+          >
+            ← Back To Admin Panel
+          </a>
+        
+        </div>
+      <!-- CARD -->
+      <div
+        class="bg-white rounded-[32px] p-6 md:p-8 shadow-sm"
+      >
+
+        <!-- TITLE -->
+        <div class="mb-8">
+
+          <h1
+            class="text-2xl md:text-4xl font-bold"
+          >
+            Upload Plan
+          </h1>
+
+          <p
+            class="mt-2 text-gray-500"
+          >
+            Add a new house plan.
+          </p>
+
+        </div>
+
+        <!-- FORM -->
+        <form
+          id="uploadPlanForm"
+          class="space-y-5"
+        >
+
+          <!-- NAME -->
+          <div>
+
+            <label
+              class="block mb-2 text-[12px] text-gray-500"
+            >
+              Plan Name
+            </label>
+
+            <input
+              id="planName"
+              type="text"
+              placeholder="Luxury Sky Villa"
+              class="w-full h-12 px-4 rounded-2xl border border-sky-100 focus:outline-none focus:border-sky-500"
+            >
+
+          </div>
+
+          <!-- PRICE -->
+          <div>
+
+            <label
+              class="block mb-2 text-[12px] text-gray-500"
+            >
+              Price (UGX)
+            </label>
+
+            <input
+              id="planPrice"
+              type="number"
+              placeholder="850000"
+              class="w-full h-12 px-4 rounded-2xl border border-sky-100 focus:outline-none focus:border-sky-500"
+            >
+
+          </div>
+
+          <!-- GRID -->
+          <div
+            class="grid grid-cols-3 gap-4"
+          >
+
+            <!-- BEDROOMS -->
+            <div>
+
+              <label
+                class="block mb-2 text-[12px] text-gray-500"
+              >
+                Bedrooms
+              </label>
+
+              <input
+                id="planBedrooms"
+                type="number"
+                class="w-full h-12 px-4 rounded-2xl border border-sky-100 focus:outline-none focus:border-sky-500"
+              >
+
+            </div>
+
+            <!-- BATHROOMS -->
+            <div>
+
+              <label
+                class="block mb-2 text-[12px] text-gray-500"
+              >
+                Baths
+              </label>
+
+              <input
+                id="planBathrooms"
+                type="number"
+                class="w-full h-12 px-4 rounded-2xl border border-sky-100 focus:outline-none focus:border-sky-500"
+              >
+
+            </div>
+
+            <!-- AREA -->
+            <div>
+
+              <label
+                class="block mb-2 text-[12px] text-gray-500"
+              >
+                Area
+              </label>
+
+              <input
+                id="planArea"
+                type="number"
+                placeholder="240"
+                class="w-full h-12 px-4 rounded-2xl border border-sky-100 focus:outline-none focus:border-sky-500"
+              >
+
+            </div>
+
+          </div>
+
+          <!-- DESCRIPTION -->
+          <div>
+
+            <label
+              class="block mb-2 text-[12px] text-gray-500"
+            >
+              Description
+            </label>
+
+            <textarea
+              id="planDescription"
+              rows="5"
+              class="w-full p-4 rounded-2xl border border-sky-100 focus:outline-none focus:border-sky-500"
+            ></textarea>
+
+          </div>
+
+          <!-- FEATURED -->
+          <label
+            class="flex items-center gap-3"
+          >
+
+            <input
+              id="planFeatured"
+              type="checkbox"
+            >
+
+            <span>
+              Featured Plan
+            </span>
+
+          </label>
+
+          <!-- IMAGES -->
+          <div>
+
+            <label
+              class="block mb-2 text-[12px] text-gray-500"
+            >
+              Plan Images
+            </label>
+
+            <input
+              id="planImages"
+              type="file"
+              multiple
+              accept="image/*"
+              class="w-full"
+            >
+
+            <!-- IMAGE PREVIEW -->
+            <div
+              id="imagePreviewContainer"
+              class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3"
+            >
+            </div>
+
+          </div>
+          <!-- PLAN FILE -->
+          <div class="mt-5">
+          
+            <label
+              class="font-medium text-sm"
+            >
+              Plan File (PDF / ZIP)
+            </label>
+          
+            <input
+              type="file"
+              id="planFile"
+              accept=".pdf,.zip"
+              class="mt-2 block w-full text-sm"
+            />
+          
+          </div>
+          
+          <!-- LOADER -->
+          <div
+            id="uploadLoader"
+            class="hidden mt-4"
+          >
+          
+            <div
+              class="w-full h-3 bg-sky-100 rounded-full overflow-hidden"
+            >
+          
+              <div
+                id="uploadProgress"
+                class="h-full bg-sky-500 w-0 transition-all"
+              ></div>
+          
+            </div>
+          
+            <p
+              id="uploadText"
+              class="mt-2 text-sm text-gray-500"
+            >
+              Uploading...
+            </p>
+          
+          </div>
+          <!-- BUTTON -->
+          <button
+            type="submit"
+            class="w-full bg-sky-500 hover:bg-sky-600 text-white h-12 rounded-2xl transition"
+          >
+            Upload Plan
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- JS -->
+  <script
+    type="module"
+    src="../assets/js/admin-upload.js"
+  ></script>
+  <script type="module" src="../assets/js/admin-guard.js"></script>
+</body>
+</html>

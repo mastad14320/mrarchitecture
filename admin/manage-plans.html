@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Manage Plans | MR Architecture</title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  />
+
+</head>
+
+<body class="bg-sky-50 text-gray-800">
+
+  <!-- PAGE -->
+  <section class="py-6 md:py-10">
+
+    <div class="max-w-7xl mx-auto px-4">
+
+      <!-- TOP -->
+      <div
+        class="flex flex-wrap items-center justify-between gap-4"
+      >
+
+        <div>
+
+          <!-- BACK -->
+          <a
+            href="index.html"
+            class="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 text-sm"
+          >
+            ← Back To Dashboard
+          </a>
+
+          <!-- TITLE -->
+          <h1
+            class="mt-4 text-2xl md:text-4xl font-bold"
+          >
+            Manage Plans
+          </h1>
+
+        </div>
+
+      </div>
+
+      <!-- SEARCH -->
+      <div class="mt-8">
+
+        <input
+          type="text"
+          id="searchPlans"
+          placeholder="Search plans..."
+          class="w-full h-12 px-5 rounded-2xl border border-sky-100 outline-none focus:border-sky-500 bg-white"
+        />
+
+      </div>
+
+      <!-- PLANS -->
+      <div
+        id="adminPlansContainer"
+        class="mt-8 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6"
+      >
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ADMIN GUARD -->
+  <script
+    type="module"
+    src="../assets/js/admin-guard.js"
+  ></script>
+
+  <!-- SCRIPT -->
+  <script
+    type="module"
+    src="../assets/js/manage-plans.js"
+  ></script>
+
+</body>
+
+</html>
